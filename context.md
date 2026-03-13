@@ -12,4 +12,4 @@ Build a workflow with **Antigravity**, **GitHub**, and **Vercel** to allow a spe
 ## Current status
 - [x] Initial GitHub connection
 - [x] Pilot landing page (`index.html`)
-- [/] Vercel integration
+- [x] Vercel integration (Push successful)
