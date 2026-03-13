@@ -1,0 +1,15 @@
+# Project Vercel01: Pilot Website Workflow
+
+## Goal
+Build a workflow with **Antigravity**, **GitHub**, and **Vercel** to allow a speedy **PRD -> Build -> Deploy** workflow.
+
+## The Workflow
+1. **Define PRD**: Update this `context.md` with features or fixes.
+2. **AI Action**: Antigravity reads `context.md`, implements changes, and verifies builds.
+3. **Push to GitHub**: Changes are pushed to the `main` branch.
+4. **Auto-Deploy**: Vercel triggers a deployment immediately upon push.
+
+## Current status
+- [x] Initial GitHub connection
+- [x] Pilot landing page (`index.html`)
+- [/] Vercel integration

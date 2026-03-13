@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Labz — Pilot Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest:     #1C4A32;
+            --forest-mid: #255C3F;
+            --teal:       #29B87A;
+            --teal-lt:    #52D49A;
+            --amber:      #E9A93A;
+            --ink:        #191C18;
+            --cream:      #F4F1E8;
+            --paper:      #FAF9F5;
+            --white:      #FEFEFD;
+            --display:    'Instrument Serif', Georgia, serif;
+            --sans:       'Outfit', system-ui, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: var(--ink);
+            color: var(--cream);
+            font-family: var(--sans);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            background: radial-gradient(circle at 50% 50%, var(--forest-mid) 0%, var(--ink) 100%);
+        }
+
+        .hero-badge {
+            background: rgba(41, 184, 122, 0.1);
+            border: 1px solid var(--teal);
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            color: var(--teal-lt);
+            margin-bottom: 2rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        h1 {
+            font-family: var(--display);
+            font-size: clamp(3rem, 10vw, 6rem);
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        h1 em {
+            font-style: italic;
+            color: var(--teal-lt);
+        }
+
+        p {
+            max-width: 600px;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .btn {
+            background: var(--teal);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 99px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.05rem;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn:hover {
+            background: var(--teal-lt);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(41, 184, 122, 0.4);
+        }
+
+        .workflow-section {
+            padding: 8rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .workflow-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 3rem 2rem;
+            border-radius: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .workflow-card:hover {
+            border-color: var(--teal);
+            background: rgba(41, 184, 122, 0.05);
+        }
+
+        .workflow-card h3 {
+            font-family: var(--display);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .workflow-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .workflow-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <section id="hero">
+        <div class="hero-badge">Lead Labz Pilot</div>
+        <h1>Speedy <em>Workflow</em> Enabled</h1>
+        <p>Connecting Antigravity, GitHub, and Vercel for high-velocity product development. One PRD, one build, instant deployment.</p>
+        <a href="https://github.com/arifindobson/lead-labz" class="btn">View on GitHub</a>
+    </section>
+
+    <div class="workflow-section">
+        <h2 style="font-family: var(--display); font-size: 3rem; text-align: center;">The Pipeline</h2>
+        <div class="workflow-grid">
+            <div class="workflow-card">
+                <h3>Antigravity</h3>
+                <p>AI-driven coding and PRD refinement in real-time.</p>
+            </div>
+            <div class="workflow-card">
+                <h3>GitHub</h3>
+                <p>Version control and seamless team collaboration.</p>
+            </div>
+            <div class="workflow-card">
+                <h3>Vercel</h3>
+                <p>Global edge network deployment with every push.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
