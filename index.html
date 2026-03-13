@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lead Labz — Pilot Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
-            --forest:     #1C4A32;
+            --forest: #1C4A32;
             --forest-mid: #255C3F;
-            --teal:       #29B87A;
-            --teal-lt:    #52D49A;
-            --amber:      #E9A93A;
-            --ink:        #191C18;
-            --cream:      #F4F1E8;
-            --paper:      #FAF9F5;
-            --white:      #FEFEFD;
-            --display:    'Instrument Serif', Georgia, serif;
-            --sans:       'Outfit', system-ui, sans-serif;
+            --teal: #29B87A;
+            --teal-lt: #52D49A;
+            --amber: #E9A93A;
+            --ink: #191C18;
+            --cream: #F4F1E8;
+            --paper: #FAF9F5;
+            --white: #FEFEFD;
+            --display: 'Instrument Serif', Georgia, serif;
+            --sans: 'Outfit', system-ui, sans-serif;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             background: var(--ink);
             color: var(--cream);
@@ -71,7 +78,7 @@
         p {
             max-width: 600px;
             font-size: 1.1rem;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             margin-bottom: 3rem;
             line-height: 1.6;
             animation: fadeInUp 1s ease 0.4s both;
@@ -109,8 +116,8 @@
         }
 
         .workflow-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             padding: 3rem 2rem;
             border-radius: 2rem;
             text-align: center;
@@ -134,30 +141,60 @@
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @media (max-width: 768px) {
-            .workflow-grid { grid-template-columns: 1fr; }
+            .workflow-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
     <section id="hero">
         <div class="hero-badge">Lead Labz Pilot</div>
         <h1>Speedy <em>Workflow</em> Enabled</h1>
-        <p>Connecting Antigravity, GitHub, and Vercel for high-velocity product development. One PRD, one build, instant deployment.</p>
-        <a href="https://github.com/arifindobson/lead-labz" class="btn">View on GitHub</a>
+        <p>Connecting Antigravity, GitHub, and Vercel for high-velocity product development. One PRD, one build, instant
+            deployment.</p>
+        <div
+            style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 1s ease 0.6s both;">
+            <a href="https://github.com/arifindobson/lead-labz" class="btn">View on GitHub</a>
+            <a href="/leadlabz-brand-guidelines-v2.html" class="btn"
+                style="background: transparent; border: 1px solid var(--teal); color: var(--teal-lt);">Brand
+                Guidelines</a>
+        </div>
     </section>
 
     <div class="workflow-section">
-        <h2 style="font-family: var(--display); font-size: 3rem; text-align: center;">The Pipeline</h2>
+        <h2 style="font-family: var(--display); font-size: 3rem; text-align: center; margin-bottom: 1rem;">The Pipeline
+        </h2>
+        <p style="text-align: center; margin: 0 auto 4rem; color: rgba(255,255,255,0.4); font-size: 1rem;">
+            This is a <strong>pilot project</strong> designed to master the modern development stack: using <em>Docs as
+                Spec</em> to define requirements, <em>AI Build</em> for rapid implementation, <em>GitHub</em> for
+            documentation and version control, and <em>Vercel</em> for seamless global deployment.
+        </p>
         <div class="workflow-grid">
             <div class="workflow-card">
                 <h3>Antigravity</h3>
@@ -174,4 +211,5 @@
         </div>
     </div>
 </body>
+
 </html>
