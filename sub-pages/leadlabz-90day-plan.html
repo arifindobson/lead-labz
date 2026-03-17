@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lead Labz — 90-Day Growth Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest:    #1E4D35;
+  --forest-dk: #0f2a1c;
+  --teal:      #2CB67D;
+  --teal-lt:   #5DD6A5;
+  --teal-pale: #E6F7F0;
+  --amber:     #E8A838;
+  --amber-lt:  #F5CC7A;
+  --amber-pale:#FDF5E3;
+  --coral:     #E85D3A;
+  --blue:      #2A8FC4;
+  --ink:       #1A1D1A;
+  --slate:     #4A5240;
+  --stone:     #8A9180;
+  --mist:      #C8CEBF;
+  --cream:     #F5F2EB;
+  --white:     #FDFCFA;
+  --ig:        #E1306C;
+  --ig-grad:   linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+  --tt:        #010101;
+  --tt-red:    #FE2C55;
+  --wa:        #25D366;
+
+  --ff-d: 'Fraunces', serif;
+  --ff-b: 'Plus Jakarta Sans', sans-serif;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--ff-b);
+  font-size:15px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ─── page ─── */
+.page{max-width:1080px;margin:0 auto;padding:0 28px 120px;}
+
+/* ─── HERO ─── */
+.hero{
+  background:var(--forest-dk);
+  border-radius:0 0 32px 32px;
+  margin:0 -28px;
+  padding:72px 64px 56px;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 55% 80% at 85% 40%, rgba(44,182,125,.18), transparent),
+    radial-gradient(ellipse 35% 50% at 15% 80%, rgba(232,168,56,.1), transparent);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1fr 340px;gap:56px;
+  align-items:center;position:relative;z-index:1;
+}
+.hero-eyebrow{
+  font-size:.65rem;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--teal-lt);opacity:.8;margin-bottom:12px;
+}
+.hero-title{
+  font-family:var(--ff-d);font-weight:900;
+  font-size:clamp(2.4rem,4vw,3.6rem);line-height:.94;
+  color:var(--white);letter-spacing:-.02em;margin-bottom:18px;
+}
+.hero-title em{font-style:italic;color:var(--teal-lt);}
+.hero-sub{
+  font-size:.95rem;font-weight:300;color:rgba(255,255,255,.55);
+  line-height:1.8;max-width:420px;margin-bottom:28px;
+}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;}
+.hpill{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  border-radius:100px;padding:5px 14px;
+  font-size:.7rem;letter-spacing:.08em;color:rgba(255,255,255,.55);
+}
+
+/* Phase dial */
+.phase-dial{
+  display:flex;flex-direction:column;gap:12px;
+}
+.dial-phase{
+  border-radius:14px;padding:20px 22px;cursor:pointer;
+  transition:transform .2s,box-shadow .2s;
+  position:relative;overflow:hidden;
+}
+.dial-phase:hover{transform:translateX(-4px);}
+.dp-1{background:rgba(44,182,125,.15);border:1px solid rgba(44,182,125,.3);}
+.dp-2{background:rgba(232,168,56,.12);border:1px solid rgba(232,168,56,.25);}
+.dp-3{background:rgba(42,143,196,.12);border:1px solid rgba(42,143,196,.25);}
+.dial-phase .dp-num{
+  font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;
+  opacity:.6;margin-bottom:4px;
+}
+.dp-1 .dp-num{color:var(--teal-lt);}
+.dp-2 .dp-num{color:var(--amber-lt);}
+.dp-3 .dp-num{color:#7ab8e8;}
+.dial-phase .dp-name{
+  font-family:var(--ff-d);font-weight:700;font-size:1rem;color:var(--white);
+}
+.dial-phase .dp-days{
+  font-size:.75rem;color:rgba(255,255,255,.4);margin-top:2px;
+}
+
+/* ─── section ─── */
+.section{margin-top:80px;}
+.sec-label{
+  font-size:.65rem;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--teal);font-weight:600;margin-bottom:10px;
+}
+.sec-title{
+  font-family:var(--ff-d);font-weight:900;
+  font-size:clamp(1.8rem,3vw,2.6rem);
+  color:var(--forest);letter-spacing:-.01em;margin-bottom:12px;
+}
+.sec-desc{
+  color:var(--slate);font-weight:300;font-size:.93rem;line-height:1.8;
+  max-width:560px;margin-bottom:40px;
+}
+hr.div{border:none;border-top:1px solid var(--mist);margin:80px 0 0;}
+
+/* ─── LEAN STARTUP OVERVIEW ─── */
+.lean-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  margin-bottom:24px;
+}
+.lean-card{
+  background:var(--white);border-radius:14px;padding:28px 24px;
+  border:1.5px solid rgba(0,0,0,.06);
+}
+.lc-icon{font-size:2rem;margin-bottom:12px;display:block;}
+.lc-title{
+  font-family:var(--ff-d);font-weight:700;font-size:1.05rem;
+  color:var(--forest);margin-bottom:8px;
+}
+.lc-desc{font-size:.85rem;color:var(--slate);font-weight:300;line-height:1.75;}
+.lean-loop{
+  background:var(--forest);border-radius:18px;padding:40px 48px;
+  display:flex;align-items:center;justify-content:space-around;
+  flex-wrap:wrap;gap:12px;position:relative;overflow:hidden;
+}
+.lean-loop::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 50% 70% at 50% 50%, rgba(44,182,125,.15),transparent);
+}
+.loop-step{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  position:relative;z-index:1;
+}
+.ls-circle{
+  width:70px;height:70px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;
+}
+.ls-label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);text-align:center;}
+.loop-arrow{font-size:1.4rem;color:rgba(255,255,255,.25);position:relative;z-index:1;}
+
+/* ─── PHASE BLOCKS ─── */
+.phase-block{
+  border-radius:20px;overflow:hidden;margin-bottom:20px;
+  border:1.5px solid rgba(0,0,0,.06);
+}
+.phase-header{
+  padding:32px 36px 28px;
+  display:flex;align-items:flex-start;justify-content:space-between;gap:24px;
+}
+.ph-1{background:linear-gradient(135deg,#1e3d28,#1a4a30);}
+.ph-2{background:linear-gradient(135deg,#3d2e0f,#4a3510);}
+.ph-3{background:linear-gradient(135deg,#0f2a3d,#133550);}
+.phase-num{
+  font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;
+  margin-bottom:8px;opacity:.7;
+}
+.ph-1 .phase-num{color:var(--teal-lt);}
+.ph-2 .phase-num{color:var(--amber-lt);}
+.ph-3 .phase-num{color:#7ab8e8;}
+.phase-name{
+  font-family:var(--ff-d);font-weight:900;font-size:1.6rem;
+  color:var(--white);line-height:1;margin-bottom:6px;
+}
+.phase-name em{font-style:italic;}
+.ph-1 .phase-name em{color:var(--teal-lt);}
+.ph-2 .phase-name em{color:var(--amber-lt);}
+.ph-3 .phase-name em{color:#7ab8e8;}
+.phase-tagline{font-size:.85rem;color:rgba(255,255,255,.45);font-weight:300;}
+.phase-badge{
+  flex-shrink:0;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+  border-radius:100px;padding:8px 18px;
+  font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.7);white-space:nowrap;
+}
+
+.phase-body{background:var(--white);padding:32px 36px;}
+
+/* goals row */
+.goals-row{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px;
+}
+.goal-chip{
+  background:var(--cream);border-radius:10px;padding:14px 16px;
+  border:1.5px solid rgba(0,0,0,.06);
+}
+.goal-chip .gc-label{
+  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+  font-weight:600;margin-bottom:4px;
+}
+.phase-1 .gc-label{color:var(--teal);}
+.phase-2 .gc-label{color:var(--amber);}
+.phase-3 .gc-label{color:var(--blue);}
+.goal-chip .gc-val{
+  font-family:var(--ff-d);font-weight:700;font-size:1.3rem;color:var(--forest);
+}
+.goal-chip .gc-desc{font-size:.75rem;color:var(--stone);margin-top:2px;}
+
+/* platform columns */
+.platform-cols{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;
+  margin-bottom:28px;
+}
+.plat-col{border-radius:12px;overflow:hidden;}
+.plat-header{
+  padding:14px 18px;display:flex;align-items:center;gap:10px;
+}
+.plat-ig .plat-header{background:var(--ig-grad);}
+.plat-tt .plat-header{background:var(--tt);border-bottom:2px solid var(--tt-red);}
+.plat-wa .plat-header{background:#075e54;}
+.plat-icon{
+  width:28px;height:28px;border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;flex-shrink:0;
+  background:rgba(255,255,255,.15);
+}
+.plat-name{font-size:.78rem;font-weight:700;color:white;letter-spacing:.04em;}
+.plat-role{font-size:.62rem;color:rgba(255,255,255,.6);letter-spacing:.1em;text-transform:uppercase;}
+.plat-body{
+  background:var(--white);padding:18px;
+  border:1.5px solid rgba(0,0,0,.06);border-top:none;
+  border-radius:0 0 12px 12px;
+}
+.plat-body ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.plat-body li{
+  font-size:.82rem;color:var(--slate);font-weight:300;
+  padding-left:16px;position:relative;line-height:1.55;
+}
+.plat-body li::before{
+  content:'→';position:absolute;left:0;
+  font-weight:700;font-size:.7rem;
+}
+.plat-ig .plat-body li::before{color:var(--ig);}
+.plat-tt .plat-body li::before{color:var(--tt-red);}
+.plat-wa .plat-body li::before{color:var(--wa);}
+
+/* weekly schedule */
+.week-grid{display:flex;flex-direction:column;gap:8px;margin-bottom:28px;}
+.week-row{
+  display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:center;
+}
+.day-label{
+  font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--stone);text-align:right;
+}
+.day-tasks{display:flex;flex-wrap:wrap;gap:7px;}
+.task-tag{
+  border-radius:100px;padding:5px 13px;
+  font-size:.72rem;font-weight:500;
+}
+.tag-ig{background:rgba(225,48,108,.1);color:var(--ig);}
+.tag-tt{background:rgba(254,44,85,.1);color:var(--tt-red);}
+.tag-wa{background:rgba(37,211,102,.1);color:#1a9e4e;}
+.tag-all{background:rgba(30,77,53,.1);color:var(--forest);}
+.tag-off{background:rgba(0,0,0,.04);color:var(--mist);}
+
+/* experiment table */
+.exp-table{width:100%;border-collapse:collapse;margin-bottom:28px;}
+.exp-table th{
+  font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;
+  font-weight:600;color:var(--teal);text-align:left;
+  padding:0 14px 12px;border-bottom:2px solid var(--mist);
+}
+.exp-table td{
+  padding:14px 14px;border-bottom:1px solid rgba(0,0,0,.05);
+  font-size:.83rem;color:var(--slate);font-weight:300;vertical-align:top;
+}
+.exp-table tr:last-child td{border-bottom:none;}
+.exp-table td:first-child{font-weight:500;color:var(--ink);}
+.hypo-tag{
+  display:inline-block;background:var(--teal-pale);color:var(--teal);
+  border-radius:100px;padding:3px 10px;font-size:.7rem;font-weight:600;
+  letter-spacing:.06em;
+}
+
+/* metrics */
+.metrics-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px;
+}
+.metric-card{
+  background:var(--cream);border-radius:12px;padding:18px 16px;
+  border:1.5px solid rgba(0,0,0,.06);text-align:center;
+}
+.metric-val{
+  font-family:var(--ff-d);font-weight:900;font-size:2rem;
+  line-height:1;margin-bottom:4px;
+}
+.metric-label{font-size:.7rem;color:var(--stone);letter-spacing:.1em;text-transform:uppercase;line-height:1.4;}
+
+/* content calendar strip */
+.cal-strip{
+  display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:8px;
+}
+.cal-day{
+  border-radius:8px;padding:10px 6px;text-align:center;
+  border:1.5px solid rgba(0,0,0,.06);
+  transition:transform .15s;cursor:default;
+}
+.cal-day:hover{transform:translateY(-2px);}
+.cal-day .cd-day{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;}
+.cal-day .cd-content{font-size:.7rem;font-weight:500;line-height:1.3;color:var(--ink);}
+.cal-day .cd-plat{font-size:.6rem;margin-top:4px;}
+.cd-ig{background:rgba(225,48,108,.06);border-color:rgba(225,48,108,.18);}
+.cd-tt{background:rgba(254,44,85,.06);border-color:rgba(254,44,85,.18);}
+.cd-wa{background:rgba(37,211,102,.06);border-color:rgba(37,211,102,.18);}
+.cd-all{background:rgba(30,77,53,.06);border-color:rgba(30,77,53,.2);}
+.cd-off{background:rgba(0,0,0,.02);opacity:.5;}
+
+/* WhatsApp community */
+.wa-card{
+  background:linear-gradient(135deg,#075e54,#128c7e);
+  border-radius:18px;padding:32px 36px;color:white;
+  display:grid;grid-template-columns:1fr 1fr;gap:32px;
+  margin-bottom:16px;position:relative;overflow:hidden;
+}
+.wa-card::before{
+  content:'';position:absolute;bottom:-40px;right:-40px;
+  width:180px;height:180px;border-radius:50%;
+  background:rgba(255,255,255,.06);
+}
+.wa-left h3{
+  font-family:var(--ff-d);font-weight:700;font-size:1.3rem;
+  margin-bottom:8px;
+}
+.wa-left p{font-size:.85rem;opacity:.7;font-weight:300;line-height:1.7;}
+.wa-rules{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.wa-rules li{
+  font-size:.82rem;opacity:.8;padding-left:20px;position:relative;line-height:1.5;
+}
+.wa-rules li::before{content:'✓';position:absolute;left:0;color:var(--teal-lt);font-weight:700;}
+.wa-schedule{display:flex;flex-direction:column;gap:10px;margin-top:16px;}
+.wa-sched-item{
+  display:flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,.08);border-radius:10px;padding:10px 14px;
+}
+.ws-day{
+  width:32px;height:32px;background:rgba(255,255,255,.15);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  flex-shrink:0;
+}
+.ws-text h5{font-size:.8rem;font-weight:600;margin-bottom:2px;}
+.ws-text p{font-size:.72rem;opacity:.6;}
+
+/* KPI / pivot table */
+.pivot-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;
+}
+.pivot-card{
+  background:var(--white);border-radius:14px;padding:24px 26px;
+  border:1.5px solid rgba(0,0,0,.06);
+}
+.pivot-card h4{
+  font-family:var(--ff-d);font-weight:700;font-size:1rem;
+  color:var(--forest);margin-bottom:14px;
+  display:flex;align-items:center;gap:8px;
+}
+.pivot-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.pivot-list li{
+  font-size:.83rem;color:var(--slate);font-weight:300;
+  padding-left:18px;position:relative;line-height:1.55;
+}
+.pivot-list li::before{content:'◆';position:absolute;left:0;font-size:.5rem;color:var(--teal);top:5px;}
+
+/* timeline visual */
+.timeline{
+  position:relative;margin:0;padding:0;
+  display:flex;flex-direction:column;gap:0;
+}
+.timeline::before{
+  content:'';position:absolute;left:19px;top:0;bottom:0;
+  width:2px;background:linear-gradient(to bottom,var(--teal),var(--amber),var(--blue));
+  opacity:.3;
+}
+.tl-item{
+  display:flex;gap:20px;padding:0 0 28px;position:relative;
+}
+.tl-dot{
+  width:40px;height:40px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.8rem;font-weight:700;z-index:1;
+  border:2px solid var(--white);
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+.tl-content{flex:1;padding-top:8px;}
+.tl-content h4{
+  font-family:var(--ff-d);font-weight:700;font-size:.95rem;
+  color:var(--forest);margin-bottom:4px;
+}
+.tl-content p{font-size:.82rem;color:var(--slate);font-weight:300;line-height:1.6;}
+
+/* checklist */
+.checklist{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;
+}
+.check-item{
+  display:flex;align-items:center;gap:10px;
+  background:var(--white);border-radius:9px;padding:11px 14px;
+  border:1.5px solid rgba(0,0,0,.05);font-size:.82rem;color:var(--slate);
+  font-weight:300;cursor:pointer;transition:background .15s,border-color .15s;
+}
+.check-item:hover{background:var(--teal-pale);border-color:rgba(44,182,125,.25);}
+.check-item input{
+  width:16px;height:16px;accent-color:var(--teal);cursor:pointer;flex-shrink:0;
+}
+
+/* tools */
+.tools-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px;}
+.tool-badge{
+  display:flex;align-items:center;gap:8px;
+  background:var(--white);border:1.5px solid rgba(0,0,0,.07);
+  border-radius:100px;padding:8px 16px;
+  font-size:.78rem;font-weight:500;color:var(--ink);
+  transition:border-color .15s,transform .15s;
+}
+.tool-badge:hover{border-color:var(--teal);transform:translateY(-1px);}
+.tool-badge .tb-dot{
+  width:8px;height:8px;border-radius:50%;flex-shrink:0;
+}
+
+/* summary scorecard */
+.scorecard{
+  background:var(--forest-dk);border-radius:20px;padding:48px 52px;
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;
+  position:relative;overflow:hidden;
+}
+.scorecard::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 45% 60% at 80% 30%, rgba(44,182,125,.15),transparent),
+    radial-gradient(ellipse 35% 50% at 20% 80%, rgba(232,168,56,.1),transparent);
+}
+.sc-col{position:relative;z-index:1;}
+.sc-col h3{
+  font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;
+  margin-bottom:16px;
+}
+.col-phase1 h3{color:var(--teal-lt);}
+.col-phase2 h3{color:var(--amber-lt);}
+.col-phase3 h3{color:#7ab8e8;}
+.sc-metric{margin-bottom:14px;}
+.sc-metric .sm-val{
+  font-family:var(--ff-d);font-weight:900;
+  font-size:2.2rem;line-height:1;
+}
+.col-phase1 .sm-val{color:var(--teal-lt);}
+.col-phase2 .sm-val{color:var(--amber-lt);}
+.col-phase3 .sm-val{color:#7ab8e8;}
+.sc-metric .sm-label{font-size:.78rem;color:rgba(255,255,255,.4);margin-top:2px;}
+.sc-divider{height:1px;background:rgba(255,255,255,.08);margin:16px 0;}
+
+/* footer */
+.footer{
+  background:var(--ink);border-radius:20px 20px 0 0;
+  margin:80px -28px 0;padding:40px 56px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;
+}
+.footer-brand{font-family:var(--ff-d);font-weight:900;font-size:1.4rem;color:var(--white);}
+.footer-brand em{font-style:italic;color:var(--teal-lt);}
+.footer-note{font-size:.75rem;color:rgba(255,255,255,.25);font-weight:300;}
+
+@media(max-width:768px){
+  .hero-grid,.lean-grid,.goals-row,.platform-cols,.metrics-grid,
+  .cal-strip,.wa-card,.pivot-grid,.scorecard,.checklist{grid-template-columns:1fr;}
+  .hero{padding:48px 28px;}
+  .phase-header,.phase-body{padding:24px;}
+  .week-row{grid-template-columns:70px 1fr;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ════════════════ HERO ════════════════ -->
+<div class="hero">
+  <div class="hero-grid">
+    <div>
+      <p class="hero-eyebrow">Lead Labz — Growth Strategy</p>
+      <h1 class="hero-title">90-Day<br><em>Launch Plan</em></h1>
+      <p class="hero-sub">A lean-startup playbook for building Lead Labz from zero — using Instagram, TikTok, and WhatsApp as your growth engine. Build → Measure → Learn. Repeat.</p>
+      <div class="hero-pills">
+        <span class="hpill">📱 Instagram</span>
+        <span class="hpill">🎵 TikTok</span>
+        <span class="hpill">💬 WhatsApp</span>
+        <span class="hpill">⚗️ Lean Startup</span>
+        <span class="hpill">🌱 Days 1–90</span>
+      </div>
+    </div>
+    <div class="phase-dial">
+      <div class="dial-phase dp-1">
+        <div class="dp-num">Phase 01 · Days 1–30</div>
+        <div class="dp-name">Plant the Seed</div>
+        <div class="dp-days">Build → Validate → Listen</div>
+      </div>
+      <div class="dial-phase dp-2">
+        <div class="dp-num">Phase 02 · Days 31–60</div>
+        <div class="dp-name">Water the Lab</div>
+        <div class="dp-days">Experiment → Measure → Iterate</div>
+      </div>
+      <div class="dial-phase dp-3">
+        <div class="dp-num">Phase 03 · Days 61–90</div>
+        <div class="dp-name">Scale What Works</div>
+        <div class="dp-days">Double down → Systematise → Grow</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ LEAN STARTUP FOUNDATION ════════════════ -->
+<div class="section" id="lean">
+  <p class="sec-label">00 — Philosophy</p>
+  <h2 class="sec-title">Lean Startup, Applied</h2>
+  <p class="sec-desc">Don't build a perfect brand before anyone cares. Ship the minimum, learn from real humans, and double down on what works. Every post is a hypothesis. Every comment is data.</p>
+
+  <div class="lean-grid">
+    <div class="lean-card">
+      <span class="lc-icon">🧱</span>
+      <div class="lc-title">Build (MVP First)</div>
+      <div class="lc-desc">Your MVP is your first 9 posts and a WhatsApp group with 10 people. No website needed yet. No paid ads. Just content and conversation.</div>
+    </div>
+    <div class="lean-card">
+      <span class="lc-icon">📊</span>
+      <div class="lc-title">Measure (Real Signals)</div>
+      <div class="lc-desc">Track saves, shares, replies, and WhatsApp responses — not just likes. These are the metrics that prove real resonance, not vanity.</div>
+    </div>
+    <div class="lean-card">
+      <span class="lc-icon">🔁</span>
+      <div class="lc-title">Learn (Fast Loops)</div>
+      <div class="lc-desc">Every 2 weeks: review data, drop what didn't land, amplify what did. At Day 30 and Day 60, make a formal pivot-or-persevere decision.</div>
+    </div>
+  </div>
+
+  <div class="lean-loop">
+    <div class="loop-step">
+      <div class="ls-circle" style="background:rgba(44,182,125,.25);">💡</div>
+      <div class="ls-label">Idea /<br>Hypothesis</div>
+    </div>
+    <div class="loop-arrow">→</div>
+    <div class="loop-step">
+      <div class="ls-circle" style="background:rgba(44,182,125,.2);">🧱</div>
+      <div class="ls-label">Build<br>MVP Content</div>
+    </div>
+    <div class="loop-arrow">→</div>
+    <div class="loop-step">
+      <div class="ls-circle" style="background:rgba(232,168,56,.2);">🚀</div>
+      <div class="ls-label">Ship to<br>Audience</div>
+    </div>
+    <div class="loop-arrow">→</div>
+    <div class="loop-step">
+      <div class="ls-circle" style="background:rgba(232,168,56,.25);">📊</div>
+      <div class="ls-label">Measure<br>Response</div>
+    </div>
+    <div class="loop-arrow">→</div>
+    <div class="loop-step">
+      <div class="ls-circle" style="background:rgba(42,143,196,.25);">🔍</div>
+      <div class="ls-label">Learn &<br>Decide</div>
+    </div>
+    <div class="loop-arrow">→</div>
+    <div class="loop-step">
+      <div class="ls-circle" style="background:rgba(42,143,196,.2);">🔁</div>
+      <div class="ls-label">Pivot or<br>Double Down</div>
+    </div>
+  </div>
+</div>
+
+<hr class="div">
+
+<!-- ════════════════ PHASE 1 ════════════════ -->
+<div class="section" id="phase1">
+  <p class="sec-label">01 — Days 1–30</p>
+  <h2 class="sec-title">Phase 1: Plant the Seed</h2>
+  <p class="sec-desc">The goal isn't to go viral. It's to find 100 people who genuinely resonate. Build the habit of showing up consistently and listen intensely to what lands.</p>
+
+  <div class="phase-block">
+    <div class="phase-header ph-1">
+      <div>
+        <div class="phase-num">Phase 01 · Lean Focus: Build & Listen</div>
+        <div class="phase-name">Plant the <em>Seed</em></div>
+        <div class="phase-tagline">Ship your MVP content. Find your first 100 believers.</div>
+      </div>
+      <div class="phase-badge">Days 1 – 30</div>
+    </div>
+    <div class="phase-body phase-1">
+
+      <!-- Goals -->
+      <div class="goals-row">
+        <div class="goal-chip">
+          <div class="gc-label">Instagram Target</div>
+          <div class="gc-val">200</div>
+          <div class="gc-desc">Followers by Day 30</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">TikTok Target</div>
+          <div class="gc-val">500</div>
+          <div class="gc-desc">Views total on 1st video</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">WhatsApp Group</div>
+          <div class="gc-val">30</div>
+          <div class="gc-desc">Active members recruited</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">Posts Published</div>
+          <div class="gc-val">20+</div>
+          <div class="gc-desc">Across all platforms</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">Insight Saves (IG)</div>
+          <div class="gc-val">3%+</div>
+          <div class="gc-desc">Save rate = resonance signal</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">WhatsApp DMs</div>
+          <div class="gc-val">10</div>
+          <div class="gc-desc">Real 1-on-1 conversations</div>
+        </div>
+      </div>
+
+      <!-- Platforms -->
+      <p style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:14px;">Platform Roles & Content Focus</p>
+      <div class="platform-cols">
+        <div class="plat-col plat-ig">
+          <div class="plat-header">
+            <div class="plat-icon">📸</div>
+            <div><div class="plat-name">Instagram</div><div class="plat-role">Awareness → Community</div></div>
+          </div>
+          <div class="plat-body">
+            <ul>
+              <li>Launch with 9-post grid: 3 quotes, 3 carousels, 3 reels</li>
+              <li>Post format: "The Mirror Series" — 1 self-leadership truth per post</li>
+              <li>3×/week cadence: Mon quote, Wed carousel, Fri reel</li>
+              <li>Use Stories daily for polls & "Lab question of the day"</li>
+              <li>Pinned Reel: "What is Lead Labz?" brand intro (60 sec)</li>
+              <li>DM every new follower personally in Week 1–2</li>
+            </ul>
+          </div>
+        </div>
+        <div class="plat-col plat-tt">
+          <div class="plat-header">
+            <div class="plat-icon">🎵</div>
+            <div><div class="plat-name">TikTok</div><div class="plat-role">Discovery → Growth</div></div>
+          </div>
+          <div class="plat-body">
+            <ul>
+              <li>2× videos/week minimum — consistency beats quality early on</li>
+              <li>Series: "1 Leadership Experiment a Day" (7-day challenge format)</li>
+              <li>Hook formula: "Nobody talks about this in leadership training…"</li>
+              <li>Use trending audio with leadership captions (contrast = engagement)</li>
+              <li>Talk directly to camera, no fancy editing needed in Phase 1</li>
+              <li>End every video: "Try this today & tell me in comments"</li>
+            </ul>
+          </div>
+        </div>
+        <div class="plat-col plat-wa">
+          <div class="plat-header">
+            <div class="plat-icon">💬</div>
+            <div><div class="plat-name">WhatsApp</div><div class="plat-role">Community → Retention</div></div>
+          </div>
+          <div class="plat-body">
+            <ul>
+              <li>Launch "Lead Labz — Beta Lab" group (invite-only, max 50)</li>
+              <li>Seed with 10 people you personally know and trust</li>
+              <li>Daily: One "Lab Prompt" at 7am — 1 reflection question</li>
+              <li>Weekly: Voice note from you sharing a personal leadership story</li>
+              <li>Rules: Be real, no spam, share your own experiments only</li>
+              <li>Use replies & reactions as product feedback loop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weekly schedule -->
+      <p style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:14px;">Weekly Content Rhythm</p>
+      <div class="week-grid">
+        <div class="week-row">
+          <div class="day-label">Monday</div>
+          <div class="day-tasks">
+            <span class="task-tag tag-ig">IG Quote Post</span>
+            <span class="task-tag tag-wa">WA Lab Prompt</span>
+          </div>
+        </div>
+        <div class="week-row">
+          <div class="day-label">Tuesday</div>
+          <div class="day-tasks">
+            <span class="task-tag tag-tt">TikTok Video</span>
+            <span class="task-tag tag-ig">IG Story Poll</span>
+          </div>
+        </div>
+        <div class="week-row">
+          <div class="day-label">Wednesday</div>
+          <div class="day-tasks">
+            <span class="task-tag tag-ig">IG Carousel</span>
+            <span class="task-tag tag-wa">WA Voice Note</span>
+          </div>
+        </div>
+        <div class="week-row">
+          <div class="day-label">Thursday</div>
+          <div class="day-tasks">
+            <span class="task-tag tag-tt">TikTok Video</span>
+            <span class="task-tag tag-ig">IG Story Q&A</span>
+          </div>
+        </div>
+        <div class="week-row">
+          <div class="day-label">Friday</div>
+          <div class="day-tasks">
+            <span class="task-tag tag-ig">IG Reel</span>
+            <span class="task-tag tag-wa">WA Weekly Recap</span>
+          </div>
+        </div>
+        <div class="week-row">
+          <div class="day-label">Saturday</div>
+          <div class="day-tasks">
+            <span class="task-tag tag-all">Review & Plan Next Week</span>
+          </div>
+        </div>
+        <div class="week-row">
+          <div class="day-label">Sunday</div>
+          <div class="day-tasks">
+            <span class="task-tag tag-off">Rest / Batch create</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hypothesis experiments -->
+      <p style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:14px;">Phase 1 Experiments (Hypotheses to Test)</p>
+      <table class="exp-table">
+        <thead><tr>
+          <th>Experiment</th><th>Hypothesis</th><th>How to Test</th><th>Success Signal</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td>Mirror Series carousel</td>
+            <td><span class="hypo-tag">H1</span> Self-reflection content gets more saves than motivational quotes</td>
+            <td>Post 3 carousels vs 3 quote images in Week 1–2</td>
+            <td>Carousels get 2× save rate</td>
+          </tr>
+          <tr>
+            <td>TikTok hook style</td>
+            <td><span class="hypo-tag">H2</span> Personal story hooks outperform "tips" hooks for this audience</td>
+            <td>Test 2 story-based vs 2 tips-based videos</td>
+            <td>Story videos get 50%+ more watch-through</td>
+          </tr>
+          <tr>
+            <td>WhatsApp prompt type</td>
+            <td><span class="hypo-tag">H3</span> Questions about self-awareness get more replies than action prompts</td>
+            <td>Week 1: action prompts. Week 2: reflection questions</td>
+            <td>Replies increase 2× with reflection format</td>
+          </tr>
+          <tr>
+            <td>Personal DMs</td>
+            <td><span class="hypo-tag">H4</span> Manual DMs to new followers convert to WA group joins</td>
+            <td>DM 30 people personally in first 2 weeks</td>
+            <td>10+ people join WA group from DMs</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Day 30 checklist -->
+      <p style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:14px;">Day 30 Checkpoint — Pivot or Persevere?</p>
+      <div class="checklist">
+        <label class="check-item"><input type="checkbox"> 20+ posts published across platforms</label>
+        <label class="check-item"><input type="checkbox"> 200+ IG followers (organic)</label>
+        <label class="check-item"><input type="checkbox"> At least 1 TikTok with 500+ views</label>
+        <label class="check-item"><input type="checkbox"> 30+ members in WhatsApp group</label>
+        <label class="check-item"><input type="checkbox"> Identified your top 3 best-performing content types</label>
+        <label class="check-item"><input type="checkbox"> Had 10+ real DM conversations about leadership</label>
+        <label class="check-item"><input type="checkbox"> Completed 4 BML (Build-Measure-Learn) review sessions</label>
+        <label class="check-item"><input type="checkbox"> Documented learnings in a "Lab Notebook" (Notion/doc)</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div">
+
+<!-- ════════════════ PHASE 2 ════════════════ -->
+<div class="section" id="phase2">
+  <p class="sec-label">02 — Days 31–60</p>
+  <h2 class="sec-title">Phase 2: Water the Lab</h2>
+  <p class="sec-desc">You have data. Now double down on what's working, introduce your first "product" (a free cohort or workshop), and turn your WhatsApp group into a genuine community.</p>
+
+  <div class="phase-block">
+    <div class="phase-header ph-2">
+      <div>
+        <div class="phase-num">Phase 02 · Lean Focus: Experiment & Iterate</div>
+        <div class="phase-name">Water the <em>Lab</em></div>
+        <div class="phase-tagline">Introduce your first offer. Find your content-market fit.</div>
+      </div>
+      <div class="phase-badge">Days 31 – 60</div>
+    </div>
+    <div class="phase-body phase-2">
+
+      <div class="goals-row">
+        <div class="goal-chip">
+          <div class="gc-label">Instagram</div>
+          <div class="gc-val">600</div>
+          <div class="gc-desc">Followers by Day 60</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">TikTok</div>
+          <div class="gc-val">1 viral</div>
+          <div class="gc-desc">1 video hitting 5K+ views</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">WhatsApp</div>
+          <div class="gc-val">80</div>
+          <div class="gc-desc">Active community members</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">First Cohort</div>
+          <div class="gc-val">15</div>
+          <div class="gc-desc">Signups for free Lab session</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">Email / DM List</div>
+          <div class="gc-val">100</div>
+          <div class="gc-desc">Direct contact captured</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">Engagement Rate</div>
+          <div class="gc-val">5%+</div>
+          <div class="gc-desc">IG average per post</div>
+        </div>
+      </div>
+
+      <div class="platform-cols">
+        <div class="plat-col plat-ig">
+          <div class="plat-header">
+            <div class="plat-icon">📸</div>
+            <div><div class="plat-name">Instagram</div><div class="plat-role">Deepen → Convert</div></div>
+          </div>
+          <div class="plat-body">
+            <ul>
+              <li>Launch "Lab Series" — 4-part carousel series with narrative arc</li>
+              <li>Introduce face-to-camera Reels: "This week in the lab" (weekly vlog style)</li>
+              <li>Start using Link in Bio to capture emails (free Linktree)</li>
+              <li>Collab with 2–3 micro-accounts in student/youth space</li>
+              <li>Run a Story challenge: "3-day leadership experiment" with reshares</li>
+              <li>Test paid Story ad — RM30 budget, track link clicks to WA group</li>
+            </ul>
+          </div>
+        </div>
+        <div class="plat-col plat-tt">
+          <div class="plat-header">
+            <div class="plat-icon">🎵</div>
+            <div><div class="plat-name">TikTok</div><div class="plat-role">Grow → Educate</div></div>
+          </div>
+          <div class="plat-body">
+            <ul>
+              <li>Go 3× per week — increase frequency based on Phase 1 data</li>
+              <li>Introduce a "Lead Labz Experiment" series with episode numbers</li>
+              <li>Duet or stitch with relevant leadership/student creators</li>
+              <li>Test POV format: "POV: you just realised you've been leading wrong"</li>
+              <li>Cross-post best TikToks to IG Reels (same video, no watermark)</li>
+              <li>Add WA group link in bio with "join the lab" CTA in every video</li>
+            </ul>
+          </div>
+        </div>
+        <div class="plat-col plat-wa">
+          <div class="plat-header">
+            <div class="plat-icon">💬</div>
+            <div><div class="plat-name">WhatsApp</div><div class="plat-role">Engage → Activate</div></div>
+          </div>
+          <div class="plat-body">
+            <ul>
+              <li>Introduce "Lab Partner" system: pair members for weekly check-ins</li>
+              <li>Host first Live Audio Room (WhatsApp Communities feature)</li>
+              <li>Weekly "Lab Report": curated learnings from the group's week</li>
+              <li>Announce free 60-min online "Intro to Self-Leadership" session</li>
+              <li>Use polls to co-create: "What should we explore next month?"</li>
+              <li>Create a second group: "Lead Labz Announcements" for scale</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- First product: free cohort -->
+      <p style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);font-weight:600;margin-bottom:14px;">🧪 First MVP Product: Free "Lab Zero" Session</p>
+      <div style="background:var(--amber-pale);border:1.5px solid rgba(232,168,56,.25);border-radius:14px;padding:24px 28px;margin-bottom:28px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+          <div>
+            <div style="font-family:var(--ff-d);font-weight:700;font-size:1.1rem;color:var(--forest);margin-bottom:8px;">What is Lab Zero?</div>
+            <p style="font-size:.85rem;color:var(--slate);font-weight:300;line-height:1.8;">A free, 60-minute Zoom/Google Meet session where 15–20 participants experience one self-leadership exercise together. No pitch. No product. Just value. This is your riskiest assumption to test: <em>will people show up?</em></p>
+          </div>
+          <div>
+            <div style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);font-weight:600;margin-bottom:10px;">How to promote it</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+              <li style="font-size:.83rem;color:var(--slate);font-weight:300;padding-left:16px;position:relative;">
+                <span style="position:absolute;left:0;color:var(--amber);">→</span>
+                IG Countdown sticker in Stories 1 week before
+              </li>
+              <li style="font-size:.83rem;color:var(--slate);font-weight:300;padding-left:16px;position:relative;">
+                <span style="position:absolute;left:0;color:var(--amber);">→</span>
+                TikTok: "I'm opening my lab for free — here's why"
+              </li>
+              <li style="font-size:.83rem;color:var(--slate);font-weight:300;padding-left:16px;position:relative;">
+                <span style="position:absolute;left:0;color:var(--amber);">→</span>
+                WA group: personal invite with link to sign-up form
+              </li>
+              <li style="font-size:.83rem;color:var(--slate);font-weight:300;padding-left:16px;position:relative;">
+                <span style="position:absolute;left:0;color:var(--amber);">→</span>
+                After event: collect feedback via Google Form (5 questions)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:14px;">Phase 2 Experiments</p>
+      <table class="exp-table">
+        <thead><tr><th>Experiment</th><th>Hypothesis</th><th>How to Test</th><th>Success Signal</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Series content format</td>
+            <td><span class="hypo-tag">H5</span> Series posts (numbered episodes) retain audience better than standalone posts</td>
+            <td>Run a 4-part IG carousel series vs 4 standalone posts</td>
+            <td>Series posts get 40%+ more profile visits</td>
+          </tr>
+          <tr>
+            <td>Free Lab Zero event</td>
+            <td><span class="hypo-tag">H6</span> 15+ people will sign up and 10+ will show up to a free session</td>
+            <td>Open registration, track signups vs attendance</td>
+            <td>10+ attendees, 80%+ satisfaction score</td>
+          </tr>
+          <tr>
+            <td>WA community activation</td>
+            <td><span class="hypo-tag">H7</span> Lab Partner pairing increases weekly active members by 30%</td>
+            <td>Pair 20 members, track message activity week-over-week</td>
+            <td>Active thread replies up 30% in paired weeks</td>
+          </tr>
+          <tr>
+            <td>Cross-platform repurposing</td>
+            <td><span class="hypo-tag">H8</span> TikTok videos repurposed as IG Reels perform within 80% of TikTok reach</td>
+            <td>Post same 4 videos on both platforms, compare reach</td>
+            <td>IG Reel gets ≥80% of TikTok views</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<hr class="div">
+
+<!-- ════════════════ PHASE 3 ════════════════ -->
+<div class="section" id="phase3">
+  <p class="sec-label">03 — Days 61–90</p>
+  <h2 class="sec-title">Phase 3: Scale What Works</h2>
+  <p class="sec-desc">You have proof. You know your audience, your best content types, and your community's real needs. Now systematise, launch your first paid offer, and build the engine.</p>
+
+  <div class="phase-block">
+    <div class="phase-header ph-3">
+      <div>
+        <div class="phase-num">Phase 03 · Lean Focus: Systematise & Scale</div>
+        <div class="phase-name">Scale What <em>Works</em></div>
+        <div class="phase-tagline">Turn learnings into systems. Launch your first real offer.</div>
+      </div>
+      <div class="phase-badge">Days 61 – 90</div>
+    </div>
+    <div class="phase-body phase-3">
+
+      <div class="goals-row">
+        <div class="goal-chip">
+          <div class="gc-label">Instagram</div>
+          <div class="gc-val">1,500</div>
+          <div class="gc-desc">Followers by Day 90</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">TikTok</div>
+          <div class="gc-val">3K+</div>
+          <div class="gc-desc">Total followers</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">WhatsApp</div>
+          <div class="gc-val">150</div>
+          <div class="gc-desc">Community members</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">Paid Cohort</div>
+          <div class="gc-val">20</div>
+          <div class="gc-desc">Paying participants (MVP price)</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">Email List</div>
+          <div class="gc-val">300</div>
+          <div class="gc-desc">Warm contacts captured</div>
+        </div>
+        <div class="goal-chip">
+          <div class="gc-label">Revenue</div>
+          <div class="gc-val">RM500+</div>
+          <div class="gc-desc">First revenue (prove willingness to pay)</div>
+        </div>
+      </div>
+
+      <div class="platform-cols">
+        <div class="plat-col plat-ig">
+          <div class="plat-header">
+            <div class="plat-icon">📸</div>
+            <div><div class="plat-name">Instagram</div><div class="plat-role">Convert → Brand Hub</div></div>
+          </div>
+          <div class="plat-body">
+            <ul>
+              <li>Post 4×/week — your best-performing format now runs 2×/week</li>
+              <li>Launch branded IG highlight covers (using brand colors)</li>
+              <li>Monthly Lives: "Lab Open House" — Q&A + community spotlight</li>
+              <li>User-generated content: reshare community "experiment" results</li>
+              <li>Announce paid cohort via multi-part Story sequence</li>
+              <li>Begin building brand recognition: consistent visual templates</li>
+            </ul>
+          </div>
+        </div>
+        <div class="plat-col plat-tt">
+          <div class="plat-header">
+            <div class="plat-icon">🎵</div>
+            <div><div class="plat-name">TikTok</div><div class="plat-role">Scale → Top of Funnel</div></div>
+          </div>
+          <div class="plat-body">
+            <ul>
+              <li>Scale to 4–5 videos/week if you've found a winning format</li>
+              <li>Introduce "Before/After" transformation content from community members</li>
+              <li>Start a branded hashtag challenge: #MyLeadLabz experiment</li>
+              <li>TikTok LIVE once a week: "Leadership Lab" casual session</li>
+              <li>Batch produce content: 1 day of filming = 2 weeks of videos</li>
+              <li>Begin exploring TikTok Creator Fund or brand partnership for credibility</li>
+            </ul>
+          </div>
+        </div>
+        <div class="plat-col plat-wa">
+          <div class="plat-header">
+            <div class="plat-icon">💬</div>
+            <div><div class="plat-name">WhatsApp</div><div class="plat-role">Retain → Graduate</div></div>
+          </div>
+          <div class="plat-body">
+            <ul>
+              <li>Restructure into WhatsApp Community with sub-groups by topic</li>
+              <li>Appoint 2–3 "Lab Mentors" from active members (peer leadership)</li>
+              <li>Run a 7-day community challenge with daily check-ins</li>
+              <li>Graduate Program: most active members get early access to paid cohort</li>
+              <li>Collect 10+ video/voice testimonials from members</li>
+              <li>Monthly "Lab Report" PDF shared in group as community content</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- First paid offer -->
+      <p style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:14px;">⚗️ First Paid Offer: "Lab One" Cohort Program</p>
+      <div style="background:var(--blue-pale);border:1.5px solid rgba(42,143,196,.2);border-radius:14px;padding:24px 28px;margin-bottom:28px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+          <div>
+            <div style="font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:8px;">What It Is</div>
+            <p style="font-size:.83rem;color:var(--slate);font-weight:300;line-height:1.75;">A 4-week online cohort. 20 people max. Weekly 90-min Zoom sessions + WhatsApp accountability pod. Focused on one pillar: Self-Awareness.</p>
+          </div>
+          <div>
+            <div style="font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:8px;">MVP Price</div>
+            <div style="font-family:var(--ff-d);font-weight:900;font-size:1.8rem;color:var(--forest);line-height:1;">RM25</div>
+            <p style="font-size:.78rem;color:var(--stone);margin-top:4px;">Low price = high signup rate = rich feedback. Raise price in Cohort 2 based on demand.</p>
+          </div>
+          <div>
+            <div style="font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:8px;">Lean Logic</div>
+            <p style="font-size:.83rem;color:var(--slate);font-weight:300;line-height:1.75;">20 paying users at any price proves willingness to pay — more valuable than 200 free users. This is your pivot point data.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pivot decisions -->
+      <div class="pivot-grid">
+        <div class="pivot-card">
+          <h4>✅ Persevere Signals</h4>
+          <ul class="pivot-list">
+            <li>Posts consistently get 3%+ save rate</li>
+            <li>WA group members reply without prompting</li>
+            <li>Lab Zero session had 10+ attendees</li>
+            <li>People are DM-ing YOU asking for more</li>
+            <li>At least 1 TikTok broke through organically</li>
+            <li>Someone says "this is exactly what I needed"</li>
+          </ul>
+        </div>
+        <div class="pivot-card">
+          <h4>⚠️ Pivot Signals</h4>
+          <ul class="pivot-list">
+            <li>Save rate stuck below 1% after 30 posts</li>
+            <li>WA group is silent — prompts get no response</li>
+            <li>Lab Zero got fewer than 5 attendees</li>
+            <li>Zero DMs expressing interest in paid offer</li>
+            <li>Same content formats keep underperforming</li>
+            <li>Audience skews differently than expected</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div">
+
+<!-- ════════════════ WHATSAPP DEEP DIVE ════════════════ -->
+<div class="section" id="community">
+  <p class="sec-label">04 — Community Engine</p>
+  <h2 class="sec-title">WhatsApp Community Playbook</h2>
+  <p class="sec-desc">WhatsApp is your retention engine and your feedback lab. It's where strangers become believers. Treat it like a product, not a group chat.</p>
+
+  <div class="wa-card">
+    <div class="wa-left">
+      <h3>Group Structure</h3>
+      <p>Start with one intimate group. Scale into a WhatsApp Community with sub-groups as you grow. Think: neighbourhood → village → city.</p>
+      <div style="margin-top:20px;">
+        <div style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px;">Growth Stages</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--teal-lt);flex-shrink:0;"></div>
+            <span style="font-size:.82rem;color:rgba(255,255,255,.7);">Days 1–30: "Beta Lab" — 1 group, 30 people, invite only</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--amber-lt);flex-shrink:0;"></div>
+            <span style="font-size:.82rem;color:rgba(255,255,255,.7);">Days 31–60: Add announcement channel, peer pairings</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#7ab8e8;flex-shrink:0;"></div>
+            <span style="font-size:.82rem;color:rgba(255,255,255,.7);">Days 61–90: Community with sub-groups (Cohort, General, Mentors)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:12px;">Weekly Community Schedule</div>
+      <div class="wa-schedule">
+        <div class="wa-sched-item">
+          <div class="ws-day">MON</div>
+          <div class="ws-text"><h5>Lab Prompt 🌱</h5><p>1 self-leadership reflection question at 7am</p></div>
+        </div>
+        <div class="wa-sched-item">
+          <div class="ws-day">WED</div>
+          <div class="ws-text"><h5>Voice Note 🎙️</h5><p>2-min personal story from you — raw and honest</p></div>
+        </div>
+        <div class="wa-sched-item">
+          <div class="ws-day">FRI</div>
+          <div class="ws-text"><h5>Lab Report 📋</h5><p>Highlight 2–3 responses from the week. Name members.</p></div>
+        </div>
+        <div class="wa-sched-item">
+          <div class="ws-day">SUN</div>
+          <div class="ws-text"><h5>Weekly Experiment 🧪</h5><p>1 micro-challenge to try in the coming week</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--white);border-radius:14px;padding:28px 32px;border:1.5px solid rgba(0,0,0,.06);">
+    <p style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:18px;">Community Rules — "The Lab Code"</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <span style="font-size:1.2rem;flex-shrink:0;">🔬</span>
+        <div><div style="font-size:.85rem;font-weight:600;color:var(--forest);margin-bottom:2px;">Be the experiment</div><div style="font-size:.8rem;color:var(--stone);font-weight:300;">Share your real experiences. Vulnerability is the currency here.</div></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <span style="font-size:1.2rem;flex-shrink:0;">🚫</span>
+        <div><div style="font-size:.85rem;font-weight:600;color:var(--forest);margin-bottom:2px;">No spam or promotions</div><div style="font-size:.8rem;color:var(--stone);font-weight:300;">This is a growth space, not a marketplace.</div></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <span style="font-size:1.2rem;flex-shrink:0;">🤝</span>
+        <div><div style="font-size:.85rem;font-weight:600;color:var(--forest);margin-bottom:2px;">Ask before you give advice</div><div style="font-size:.8rem;color:var(--stone);font-weight:300;">Check if someone wants a listener or a problem solver first.</div></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <span style="font-size:1.2rem;flex-shrink:0;">🎯</span>
+        <div><div style="font-size:.85rem;font-weight:600;color:var(--forest);margin-bottom:2px;">Show up, even small</div><div style="font-size:.8rem;color:var(--stone);font-weight:300;">One emoji reaction counts. Presence matters more than words.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div">
+
+<!-- ════════════════ TOOLS & STACK ════════════════ -->
+<div class="section" id="tools">
+  <p class="sec-label">05 — Lean Stack</p>
+  <h2 class="sec-title">Tools for 90 Days</h2>
+  <p class="sec-desc">Free or near-free. No bloat. Everything you need, nothing you don't. Stay lean until you have revenue to justify upgrades.</p>
+
+  <div class="tools-row">
+    <div class="tool-badge"><div class="tb-dot" style="background:#E1306C;"></div>Instagram</div>
+    <div class="tool-badge"><div class="tb-dot" style="background:#010101;"></div>TikTok</div>
+    <div class="tool-badge"><div class="tb-dot" style="background:#25D366;"></div>WhatsApp</div>
+    <div class="tool-badge"><div class="tb-dot" style="background:#00B884;"></div>Canva (Free)</div>
+    <div class="tool-badge"><div class="tb-dot" style="background:#FF5700;"></div>CapCut (Video editing)</div>
+    <div class="tool-badge"><div class="tb-dot" style="background:#000;"></div>Notion (Lab Notebook)</div>
+    <div class="tool-badge"><div class="tb-dot" style="background:#4285F4;"></div>Google Forms (Feedback)</div>
+    <div class="tool-badge"><div class="tb-dot" style="background:#0078D7;"></div>Google Meet / Zoom Free</div>
+    <div class="tool-badge"><div class="tb-dot" style="background:#F6821F;"></div>Linktree (Link in bio)</div>
+    <div class="tool-badge"><div class="tb-dot" style="background:#2CB67D;"></div>Tally.so (Sign-up forms)</div>
+    <div class="tool-badge"><div class="tb-dot" style="background:#FF6B35;"></div>Later / Buffer (Scheduling)</div>
+    <div class="tool-badge"><div class="tb-dot" style="background:#1a1d1a;"></div>Sheets (Metrics tracking)</div>
+  </div>
+
+  <div style="background:var(--white);border-radius:14px;padding:24px 28px;border:1.5px solid rgba(0,0,0,.06);">
+    <p style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:16px;">Weekly 30-Minute Metrics Review (Saturday)</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+      <div>
+        <div style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#E1306C;font-weight:600;margin-bottom:8px;">📸 Instagram</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+          <li style="font-size:.8rem;color:var(--slate);">→ Reach & impressions</li>
+          <li style="font-size:.8rem;color:var(--slate);">→ Saves per post</li>
+          <li style="font-size:.8rem;color:var(--slate);">→ Profile visits</li>
+          <li style="font-size:.8rem;color:var(--slate);">→ Follower count change</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#FE2C55;font-weight:600;margin-bottom:8px;">🎵 TikTok</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+          <li style="font-size:.8rem;color:var(--slate);">→ Watch time %</li>
+          <li style="font-size:.8rem;color:var(--slate);">→ Shares</li>
+          <li style="font-size:.8rem;color:var(--slate);">→ Comments sentiment</li>
+          <li style="font-size:.8rem;color:var(--slate);">→ Profile link clicks</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#25D366;font-weight:600;margin-bottom:8px;">💬 WhatsApp</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+          <li style="font-size:.8rem;color:var(--slate);">→ Replies to daily prompt</li>
+          <li style="font-size:.8rem;color:var(--slate);">→ Unprompted messages</li>
+          <li style="font-size:.8rem;color:var(--slate);">→ New member joins</li>
+          <li style="font-size:.8rem;color:var(--slate);">→ Churn (exits)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div">
+
+<!-- ════════════════ TIMELINE ════════════════ -->
+<div class="section" id="timeline">
+  <p class="sec-label">06 — Visual Timeline</p>
+  <h2 class="sec-title">Day by Day: Key Milestones</h2>
+  <p class="sec-desc">The most important moments in your first 90 days. Each one is a decision point — evaluate honestly and adapt.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--teal);color:white;font-size:.65rem;">D1</div>
+        <div class="tl-content">
+          <h4>Launch Day</h4>
+          <p>Post first 9 IG grid photos. Publish first TikTok. Launch WhatsApp "Beta Lab" with 10 personal invites.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--teal-lt);color:white;font-size:.6rem;">D7</div>
+        <div class="tl-content">
+          <h4>First Review</h4>
+          <p>Review first week's data. Identify which 1–2 posts got the most saves/shares. Double down on that format.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--teal-lt);color:white;font-size:.6rem;">D14</div>
+        <div class="tl-content">
+          <h4>First BML Loop Complete</h4>
+          <p>Your first Build-Measure-Learn cycle closes. Adjust 1 thing based on data. Drop 1 content type that isn't working.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:rgba(44,182,125,.4);color:var(--forest);font-size:.6rem;">D30</div>
+        <div class="tl-content">
+          <h4>Phase 1 Pivot Point</h4>
+          <p>Formal review. Score yourself against Phase 1 goals. Decide: pivot or persevere. Write a one-page "Lab Report" to yourself.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--amber);color:white;font-size:.6rem;">D35</div>
+        <div class="tl-content">
+          <h4>Announce Lab Zero</h4>
+          <p>First public announcement of the free session. Track signups — this is your first real conversion funnel test.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--amber);color:white;font-size:.6rem;">D45</div>
+        <div class="tl-content">
+          <h4>Lab Zero Session</h4>
+          <p>Host your first free event. Collect feedback from every participant. This is your most important data day yet.</p>
+        </div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--amber-lt);color:white;font-size:.6rem;">D50</div>
+        <div class="tl-content">
+          <h4>Lab Zero Debrief</h4>
+          <p>Analyse feedback. Identify top 3 insights. Begin designing Lab One (paid cohort) based on what participants asked for.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:rgba(232,168,56,.4);color:var(--ink);font-size:.6rem;">D60</div>
+        <div class="tl-content">
+          <h4>Phase 2 Pivot Point</h4>
+          <p>Second formal review. Compare metrics vs Phase 2 targets. Make a clear decision on your paid offer format and price.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--blue);color:white;font-size:.6rem;">D65</div>
+        <div class="tl-content">
+          <h4>Launch Lab One</h4>
+          <p>Open registration for paid cohort. RM25 MVP price. Target: 20 people. This is where the brand becomes a business.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--blue);color:white;font-size:.6rem;">D75</div>
+        <div class="tl-content">
+          <h4>Lab One Begins</h4>
+          <p>Run the 4-week cohort. Collect testimonials. Treat every participant like a co-designer of the product.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:rgba(42,143,196,.4);color:var(--ink);font-size:.6rem;">D85</div>
+        <div class="tl-content">
+          <h4>WA Community Upgrade</h4>
+          <p>Migrate to WhatsApp Community with sub-groups. Appoint peer mentors. The community can now run itself for stretches.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--forest);color:white;font-size:.6rem;">D90</div>
+        <div class="tl-content">
+          <h4>90-Day Final Review</h4>
+          <p>Write your full Lab Report. What worked? What surprised you? What's your next 90-day plan? You are now a leader who leads.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div">
+
+<!-- ════════════════ 90-DAY SCORECARD ════════════════ -->
+<div class="section" id="scorecard">
+  <p class="sec-label">07 — Summary Scorecard</p>
+  <h2 class="sec-title">If You Hit These by Day 90…</h2>
+  <p class="sec-desc">You haven't just built a brand. You've built proof. Proof that people care, proof of willingness to pay, and proof that you can lead — starting with yourself.</p>
+
+  <div class="scorecard">
+    <div class="sc-col col-phase1">
+      <h3>Phase 1 · Days 1–30</h3>
+      <div class="sc-metric"><div class="sm-val">200</div><div class="sm-label">IG Followers</div></div>
+      <div class="sc-divider"></div>
+      <div class="sc-metric"><div class="sm-val">500</div><div class="sm-label">TikTok Views (1 video)</div></div>
+      <div class="sc-divider"></div>
+      <div class="sc-metric"><div class="sm-val">30</div><div class="sm-label">WA Members</div></div>
+      <div class="sc-divider"></div>
+      <div class="sc-metric"><div class="sm-val">20+</div><div class="sm-label">Posts Published</div></div>
+    </div>
+    <div class="sc-col col-phase2">
+      <h3>Phase 2 · Days 31–60</h3>
+      <div class="sc-metric"><div class="sm-val">600</div><div class="sm-label">IG Followers</div></div>
+      <div class="sc-divider"></div>
+      <div class="sc-metric"><div class="sm-val">5K+</div><div class="sm-label">1 TikTok Video Views</div></div>
+      <div class="sc-divider"></div>
+      <div class="sc-metric"><div class="sm-val">80</div><div class="sm-label">WA Members</div></div>
+      <div class="sc-divider"></div>
+      <div class="sc-metric"><div class="sm-val">10+</div><div class="sm-label">Lab Zero Attendees</div></div>
+    </div>
+    <div class="sc-col col-phase3">
+      <h3>Phase 3 · Days 61–90</h3>
+      <div class="sc-metric"><div class="sm-val">1,500</div><div class="sm-label">IG Followers</div></div>
+      <div class="sc-divider"></div>
+      <div class="sc-metric"><div class="sm-val">3K+</div><div class="sm-label">TikTok Followers</div></div>
+      <div class="sc-divider"></div>
+      <div class="sc-metric"><div class="sm-val">150</div><div class="sm-label">WA Members</div></div>
+      <div class="sc-divider"></div>
+      <div class="sc-metric"><div class="sm-val">20</div><div class="sm-label">Paying Cohort Members</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<div class="footer">
+  <div class="footer-brand">Lead <em>Labz</em></div>
+  <div class="footer-note">90-Day Growth Plan · Lean Startup Edition · v1.0</div>
+  <div style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25);">Lead Yourself First</div>
+</div>
+
+</div><!-- /page -->
+
+<script>
+// Checkbox persistence
+document.querySelectorAll('.check-item input').forEach((cb,i) => {
+  const key = 'llz_check_'+i;
+  cb.checked = localStorage.getItem(key)==='1';
+  cb.addEventListener('change', () => {
+    localStorage.setItem(key, cb.checked ? '1' : '0');
+  });
+});
+
+// Scroll spy for phase dial
+const phases = [{id:'phase1',el:0},{id:'phase2',el:1},{id:'phase3',el:2}];
+window.addEventListener('scroll', () => {
+  phases.forEach(p => {
+    const el = document.getElementById(p.id);
+    if(!el) return;
+    const rect = el.getBoundingClientRect();
+    const dial = document.querySelectorAll('.dial-phase')[p.el];
+    if(!dial) return;
+    if(rect.top < window.innerHeight * 0.5 && rect.bottom > 0) {
+      dial.style.opacity = '1';
+      dial.style.transform = 'translateX(-6px)';
+    } else {
+      dial.style.opacity = '0.7';
+      dial.style.transform = 'translateX(0)';
+    }
+  });
+});
+
+// Smooth entrance animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.style.opacity='1';
+      e.target.style.transform='translateY(0)';
+    }
+  });
+},{threshold:0.1});
+
+document.querySelectorAll('.lean-card,.phase-block,.wa-card,.pivot-card,.tl-item').forEach(el => {
+  el.style.opacity='0';
+  el.style.transform='translateY(20px)';
+  el.style.transition='opacity .6s ease, transform .6s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
